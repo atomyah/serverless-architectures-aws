@@ -24,7 +24,8 @@ var videoController = {
 		});
 	},
 	updateVideoFrontpage: function(data) {
-		var baseUrl = data.domain;
+		//var baseUrl = data.domain;     by this statement, "The bucket you are attempting to access must be addressed using the specified endpoint." error.
+		var baseUrl = 'https://s3-ap-northeast-1.amazonaws.com'; //    added by hard coded.
 		var bucket = data.bucket;
 
 		for (var i = 0; i < data.files.length; i++) {
