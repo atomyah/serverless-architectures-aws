@@ -42,7 +42,7 @@ var uploadController = {
         fd.append('file', file, file.name);
 
         $.ajax({
-            url: data.upload_url,
+            url: 'https://s3-ap-northeast-1.amazonaws.com/serverless-video-upload',
             type: 'POST',
             data: fd,
             processData: false,
